@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e252c;
+  color: white;
+  user-select: none;
+}
+
+/* Barra de navegación */
+.container {
+  position: sticky;
+  margin-top: 1rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #0a0a0a;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav:hover {
+  background-color: #111;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+nav a {
+  text-decoration: none;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  color: #cfd8dc;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #258125;
+  color: white;
+}
+
+.nav__logo {
+  width: 48px;
+  height: 48px;
+  margin-top: 0.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#duplicate-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Sección de incio */
+
+.inicio_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+
+  display: grid;
+
+  grid-template-columns: minmax(300px, 600px) minmax(300px, 600px);
+
+  grid-template-areas: 
+  "ft_perfil titulos"
+  "ft_perfil botones"
+  ;
+  align-content: center ;
+  
+  
+}
+
+.ft_perfil{
+  width: 245px;
+  height: 245px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.perfil {
+  grid-area: ft_perfil;
+  align-items: center;
+}
+
+
+
+.info {
+  grid-area: titulos;
+  
+  
+}
+
+.redes {
+  grid-area: botones;
+  border-radius: 0.75rem;
+
+  display: flex;
+  justify-content: flex-start; 
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+
+
+button {
+  height: 35px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.40rem;
+}
+
+button:hover {
+  
+}
+
+.contenido{
+  margin-top: 1rem;
+}
+
+.link_lgo{
+width: 35px;
+height: 35px;
+}
+
+.gh_lgo{
+width: 35px;
+height: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
