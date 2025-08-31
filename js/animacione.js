@@ -1,12 +1,13 @@
+//Animacion de la barra de navegacion
 const nav = document.querySelector("#nav");
 
-// Duplicar y preparar
+
 const duplicate = nav.cloneNode(true);
 duplicate.id = "duplicate-nav";
 duplicate.setAttribute("aria-hidden", true);
 nav.parentNode.insertBefore(duplicate, nav.nextSibling);
 
-// Función para aplicar clip-path a un enlace
+
 function applyClipPath(link) {
   const { offsetLeft, offsetWidth } = link;
   const clipLeft = offsetLeft;
@@ -19,13 +20,13 @@ function applyClipPath(link) {
   ).toFixed()}% round 1rem)`;
 }
 
-// Esperar a que cargue todo para aplicar el clip inicial
+
 window.addEventListener("load", () => {
   const firstLink = nav.querySelector("a");
   applyClipPath(firstLink);
 });
 
-// Actualizar clip-path al hacer clic
+
 nav.addEventListener("click", (e) => {
   const link = e.target.closest("a");
   if (link) {
@@ -33,7 +34,33 @@ nav.addEventListener("click", (e) => {
   }
 });
 
-// Prevenir selección por doble clic
+
 nav.addEventListener("dblclick", (e) => {
   e.preventDefault();
 });
+
+
+//Animacion del slider de proyectos
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let slides = document.querySelectorAll(".slider img");
+  let dots = document.querySelectorAll(".dot");
+  
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  
+  // Ocultar todas
+  slides.forEach(slide => slide.style.display = "none");
+  dots.forEach(dot => dot.classList.remove("active"));
+  
+  // Mostrar la actual
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].classList.add("active");
+}

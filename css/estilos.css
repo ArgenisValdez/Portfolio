@@ -9,9 +9,16 @@ body {
 }
 
 /* Barra de navegación */
-.container {
+header{
   position: sticky;
-  margin-top: 1rem;
+  top: 0;
+  z-index: 1000;
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 599px;
+  margin:0 auto;
   z-index: 1000;
   display: flex;
   justify-content: center;
@@ -73,56 +80,61 @@ nav a:focus {
 
 /* Sección de incio */
 
+.inicio{
+  display: flex;
+  justify-content: center;
+  max-width: 599px;
+  margin: 0 auto;
+  align-items: center;
+  padding: 2rem;
+}
+
 .inicio_container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-
   display: grid;
-
   grid-template-columns: minmax(300px, 600px) minmax(300px, 600px);
-
   grid-template-areas: 
   "ft_perfil titulos"
   "ft_perfil botones"
   ;
-  align-content: center ;
-  
-  
+  align-content: center ; 
+
+  background-color: #141414; 
+  border-radius: 1rem; 
+  padding: 1rem; 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
 }
 
 .ft_perfil{
-  width: 245px;
-  height: 245px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: cover; 
+  margin-top: -5px; 
 }
 
 .perfil {
   grid-area: ft_perfil;
   align-items: center;
+  display: flex;
+  justify-content: center; 
 }
 
 
 
 .info {
   grid-area: titulos;
-  
-  
 }
 
 .redes {
   grid-area: botones;
   border-radius: 0.75rem;
+  margin-top: 0.9rem;
 
   display: flex;
   justify-content: flex-start; 
   gap: 0.3rem;
   flex-wrap: wrap;
 }
-
 
 
 button {
@@ -132,7 +144,9 @@ button {
 }
 
 button:hover {
-  
+  background-color: #258125;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .contenido{
@@ -144,10 +158,141 @@ width: 35px;
 height: 35px;
 }
 
+.link_lgo:hover{
+  transform: scale(0.9);
+  transition: transform 0.2s;
+}
+
 .gh_lgo{
 width: 35px;
 height: 35px;
 }
+
+.gh_lgo:hover{
+  transform: scale(0.9);
+  transition: transform 0.2s;
+}
+
+/*Seccion proyectos*/
+
+.proyectos {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.proyectos_container {
+  position: relative;
+  max-width: 635px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  background: #141414;
+}
+
+.proyectos_body{
+  display: flex;
+  flex-direction: column;
+}
+
+/* Slider de imágenes */
+.slider {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 340px;          
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.slider img {
+  max-width: 85%;      
+  max-height: 100%;
+  object-fit: contain;
+  
+}
+
+.slider_wrapper {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Texto debajo del slider */
+.proyectos_texts {
+  max-width: 90%;
+  margin: auto;
+  color: #fff;
+}
+
+.proyectos_texts .Titulo {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.proyectos_descripcion {
+  font-size: 19px;
+  line-height: 1.5;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.proyectos_texts h3 {
+  margin-bottom: 10px;
+}
+
+.tecnologias{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 1.2rem;
+}
+
+
+
+/* Flechas de navegación */
+
+
+
+
+
+/* Dots debajo de las imágenes */
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+  background-color: #fff;
+}
+
+
+
+
+
+
 
 
 
