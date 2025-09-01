@@ -42,25 +42,32 @@ nav.addEventListener("dblclick", (e) => {
 
 //Animacion del slider de proyectos
 
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndexes = {}; 
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function currentSlide(n, sliderId) {
+  showSlides(slideIndexes[sliderId] = n, sliderId);
 }
 
-function showSlides(n) {
-  let slides = document.querySelectorAll(".slider img");
-  let dots = document.querySelectorAll(".dot");
-  
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  
-  // Ocultar todas
+function showSlides(n, sliderId) {
+  let sliderWrapper = document.querySelector(`.slider_wrapper[data-slider="${sliderId}"]`);
+  let slides = sliderWrapper.querySelectorAll(".slider img");
+  let dots = sliderWrapper.querySelectorAll(".dot");
+
+  if (!slideIndexes[sliderId]) slideIndexes[sliderId] = 1;
+
+  if (n > slides.length) { slideIndexes[sliderId] = 1 }
+  if (n < 1) { slideIndexes[sliderId] = slides.length }
+
   slides.forEach(slide => slide.style.display = "none");
   dots.forEach(dot => dot.classList.remove("active"));
-  
-  // Mostrar la actual
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].classList.add("active");
+
+  slides[slideIndexes[sliderId]-1].style.display = "block";
+  dots[slideIndexes[sliderId]-1].classList.add("active");
 }
+
+
+document.querySelectorAll(".slider_wrapper").forEach((wrapper, index) => {
+  let id = index + 1;
+  showSlides(1, id);
+});
+

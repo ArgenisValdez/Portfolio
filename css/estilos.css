@@ -3,6 +3,7 @@
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
   background-color: #1e252c;
   color: white;
   user-select: none;
@@ -36,6 +37,7 @@ nav {
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transform: translateX(-8px);
 }
 
 nav:hover {
@@ -147,6 +149,7 @@ button:hover {
   background-color: #258125;
   color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
 }
 
 .contenido{
@@ -178,10 +181,7 @@ height: 35px;
 .proyectos {
   display: flex;
   justify-content: center;
-  padding: 40px 0;
-}
-
-.proyectos_container {
+  padding: 10px 0;
   position: relative;
   max-width: 635px;
   margin: 0 auto;
@@ -194,6 +194,12 @@ height: 35px;
 .proyectos_body{
   display: flex;
   flex-direction: column;
+}
+
+.titulo_principal{
+  text-align: center;
+  padding: 10px;
+  color: #fff;
 }
 
 /* Slider de imágenes */
@@ -233,9 +239,52 @@ height: 35px;
 }
 
 .proyectos_texts .Titulo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   font-size: 30px;
   margin-bottom: 10px;
 }
+
+.branch_wrapper {
+  margin-top: 5px;
+  position: relative;
+  display: inline-block;
+}
+
+.branch_lgo {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.2s;
+}
+
+.branch_wrapper:hover .branch_lgo {
+  transform: scale(0.9);
+}
+
+.tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.branch_wrapper:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 .proyectos_descripcion {
   font-size: 19px;
@@ -249,24 +298,26 @@ height: 35px;
 }
 
 .tecnologias{
-  display: flex;
-  flex-wrap: wrap;
   gap: 0.3rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
 }
 
+.ver_mas{
+  text-align: right;
+  margin-right: 35px;
+  margin-bottom: 15px;
+}
 
-
-/* Flechas de navegación */
-
-
-
+.ver_mas a{
+  color: rgb(173, 173, 173);
+  font-weight: bold;
+}
 
 
 /* Dots debajo de las imágenes */
 .dots {
   position: absolute;
-  bottom: 10px;
+  bottom: 0.50px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
