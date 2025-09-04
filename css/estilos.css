@@ -314,8 +314,7 @@ height: 35px;
 }
 
 .ver_mas a:hover{
-  color: blue;
-  
+  color: #258125;  
 }
 
 /* Dots debajo de las imágenes */
@@ -354,6 +353,7 @@ height: 35px;
   border-radius: 15px;
   max-width: 635px;
   margin: 0 auto;
+  margin-top: 32px;
 }
 
 
