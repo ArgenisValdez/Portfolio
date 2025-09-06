@@ -1,2 +1,1 @@
-Mi portfolio
-<img width="1365" height="739" alt="image" src="https://github.com/user-attachments/assets/5167b5ae-a9af-4f80-baf1-fafd05e2d8ff" />
+<img width="1365" height="737" alt="image" src="https://github.com/user-attachments/assets/ccc56366-8f9d-4eb8-bac6-b0639ca2fdf8" />
