@@ -79,25 +79,35 @@ document.querySelectorAll(".slider_wrapper").forEach((wrapper, index) => {
 
 //Slider de certificaciones 
 
-const slider = document.getElementById("slider");
+const slides = document.querySelectorAll("#slider img");
 const next = document.getElementById("next");
 const prev = document.getElementById("prev");
 
 let index = 0;
-const totalImages = slider.children.length;
 
+// Función para mostrar la imagen activa
 function showSlide(i) {
-  slider.style.transform = `translateX(-${i * 100}%)`;
+  slides.forEach((img, idx) => {
+    img.classList.remove("active");
+    if (idx === i) img.classList.add("active");
+  });
 }
 
+// Flecha derecha
 next.addEventListener("click", () => {
-  index = (index + 1) % totalImages;
+  index = (index + 1) % slides.length;
   showSlide(index);
 });
 
+// Flecha izquierda
 prev.addEventListener("click", () => {
-  index = (index - 1 + totalImages) % totalImages;
+  index = (index - 1 + slides.length) % slides.length;
   showSlide(index);
 });
+
+// Mostrar la primera imagen al cargar
+showSlide(index);
+
+
 
 
