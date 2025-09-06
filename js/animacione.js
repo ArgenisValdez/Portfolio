@@ -40,6 +40,9 @@ nav.addEventListener("dblclick", (e) => {
 });
 
 
+
+
+
 //Animacion del slider de proyectos
 
 let slideIndexes = {}; 
@@ -70,4 +73,31 @@ document.querySelectorAll(".slider_wrapper").forEach((wrapper, index) => {
   let id = index + 1;
   showSlides(1, id);
 });
+
+
+
+
+//Slider de certificaciones 
+
+const slider = document.getElementById("slider");
+const next = document.getElementById("next");
+const prev = document.getElementById("prev");
+
+let index = 0;
+const totalImages = slider.children.length;
+
+function showSlide(i) {
+  slider.style.transform = `translateX(-${i * 100}%)`;
+}
+
+next.addEventListener("click", () => {
+  index = (index + 1) % totalImages;
+  showSlide(index);
+});
+
+prev.addEventListener("click", () => {
+  index = (index - 1 + totalImages) % totalImages;
+  showSlide(index);
+});
+
 

@@ -345,6 +345,7 @@ height: 35px;
 /*Certificaciones*/
 
 .certificaciones{
+  position: relative;
   background-color: #6a7683;
   opacity: 0.9;
   background-image:  linear-gradient(30deg, #0b0b0b 12%, transparent 12.5%, transparent 87%, #0b0b0b 87.5%, #0b0b0b), linear-gradient(150deg, #0b0b0b 12%, transparent 12.5%, transparent 87%, #0b0b0b 87.5%, #0b0b0b), linear-gradient(30deg, #0b0b0b 12%, transparent 12.5%, transparent 87%, #0b0b0b 87.5%, #0b0b0b), linear-gradient(150deg, #0b0b0b 12%, transparent 12.5%, transparent 87%, #0b0b0b 87.5%, #0b0b0b), linear-gradient(60deg, #0b0b0b77 25%, transparent 25.5%, transparent 75%, #0b0b0b77 75%, #0b0b0b77), linear-gradient(60deg, #0b0b0b77 25%, transparent 25.5%, transparent 75%, #0b0b0b77 75%, #0b0b0b77);
@@ -354,8 +355,52 @@ height: 35px;
   max-width: 635px;
   margin: 0 auto;
   margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
 }
 
+.certificaciones_container {
+  position: relative;
+  max-width: 635px; 
+  overflow: hidden;
+}
+
+.slider_wrapper_certificaciones {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider_carts {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider_carts img {
+  min-width: 100%; 
+  max-width: 93px;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.leftarrow {
+  left: -2px; 
+}
+
+.rightarrow {
+  right: -2px;
+}
 
 
 
