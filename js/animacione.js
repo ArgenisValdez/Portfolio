@@ -109,5 +109,28 @@ prev.addEventListener("click", () => {
 showSlide(index);
 
 
+//Modal de certificaciones
+ const verMasBtn = document.getElementById("verMasBtn");
+    const modal = document.getElementById("modalCertificados");
+    const closeModal = document.getElementById("closeModal");
+
+    // Abrir modal
+    verMasBtn.addEventListener("click", () => {
+        modal.style.display = "flex";
+    });
+
+    // Cerrar modal con X
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Cerrar modal haciendo click fuera del contenido
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+
 
 
