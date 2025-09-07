@@ -362,6 +362,7 @@ height: 35px;
   margin: 0 auto;
   margin-top: 32px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 40px 0;
@@ -429,7 +430,7 @@ height: 35px;
 
 /* Botón Ver Más */
 .ver-mas-btn {
-    position: absolute;
+    position: relative;
     bottom: 20px;
     right: 20px;
     background: #0077ff;
