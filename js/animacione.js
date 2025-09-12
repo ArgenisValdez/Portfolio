@@ -9,7 +9,10 @@ nav.parentNode.insertBefore(duplicate, nav.nextSibling);
 
 
 function applyClipPath(link) {
-  const { offsetLeft, offsetWidth } = link;
+  const {
+    offsetLeft,
+    offsetWidth
+  } = link;
   const clipLeft = offsetLeft;
   const clipRight = offsetLeft + offsetWidth;
 
@@ -45,7 +48,7 @@ nav.addEventListener("dblclick", (e) => {
 
 //Animacion del slider de proyectos
 
-let slideIndexes = {}; 
+let slideIndexes = {};
 
 function currentSlide(n, sliderId) {
   showSlides(slideIndexes[sliderId] = n, sliderId);
@@ -58,14 +61,18 @@ function showSlides(n, sliderId) {
 
   if (!slideIndexes[sliderId]) slideIndexes[sliderId] = 1;
 
-  if (n > slides.length) { slideIndexes[sliderId] = 1 }
-  if (n < 1) { slideIndexes[sliderId] = slides.length }
+  if (n > slides.length) {
+    slideIndexes[sliderId] = 1
+  }
+  if (n < 1) {
+    slideIndexes[sliderId] = slides.length
+  }
 
   slides.forEach(slide => slide.style.display = "none");
   dots.forEach(dot => dot.classList.remove("active"));
 
-  slides[slideIndexes[sliderId]-1].style.display = "block";
-  dots[slideIndexes[sliderId]-1].classList.add("active");
+  slides[slideIndexes[sliderId] - 1].style.display = "block";
+  dots[slideIndexes[sliderId] - 1].classList.add("active");
 }
 
 
@@ -110,27 +117,26 @@ showSlide(index);
 
 
 //Modal de certificaciones
- const verMasBtn = document.getElementById("verMasBtn");
-    const modal = document.getElementById("modalCertificados");
-    const closeModal = document.getElementById("closeModal");
+const verMasBtn = document.getElementById("verMasBtn");
+const modal = document.getElementById("modalCertificados");
+const closeModal = document.getElementById("closeModal");
 
-    // Abrir modal
-    verMasBtn.addEventListener("click", () => {
-        modal.style.display = "flex";
-    });
+// Abrir modal
+verMasBtn.addEventListener("click", () => {
+  modal.style.display = "flex";
+  document.body.classList.add("modal-open"); // bloquear scroll principal
+});
 
-    // Cerrar modal con X
-    closeModal.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
+// Cerrar modal con X
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+  document.body.classList.remove("modal-open"); // reactivar scroll
+});
 
-    // Cerrar modal haciendo click fuera del contenido
-    window.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-
-
-
-
+// Cerrar modal clicando fuera
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+  }
+});

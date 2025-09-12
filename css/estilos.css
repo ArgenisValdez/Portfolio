@@ -451,8 +451,13 @@ height: 35px;
 }
 
 /* Modal */
+body.modal-open {
+    overflow: hidden;
+}
+
+
 .modal {
-    display: none; /* oculto por defecto */
+    display: none; 
     position: fixed;
     z-index: 999;
     left: 0;
@@ -470,6 +475,8 @@ height: 35px;
     border-radius: 12px;
     width: 80%;
     max-width: 900px;
+    max-height: 80vh;   
+    overflow-y: auto;   
     box-shadow: 0px 4px 20px rgba(0,0,0,0.3);
     position: relative;
     animation: fadeIn 0.3s ease-in-out;
