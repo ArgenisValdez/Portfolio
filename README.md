@@ -1,4 +1,4 @@
-<div target="_blank">link a la página: https://argenisvaldez.github.io/Portfolio</div> 
+<a target="_blank">link a la página: https://argenisvaldez.github.io/Portfolio</a> 
 
 En proceso 
 
