@@ -193,7 +193,7 @@ height: 35px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
   background: #141414;
 }
 
@@ -359,6 +359,7 @@ height: 35px;
   background-size: 22px 39px;
   background-position: 0 0, 0 0, 11px 19px, 11px 19px, 0 0, 11px 19px;
   border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
   max-width: 635px;
   margin: 0 auto;
   margin-top: 32px;
@@ -522,16 +523,25 @@ body.modal-open {
 }
 
 .tech_usadas{
-  background-color: #292e33;
+  background-color: #1e252c;
   opacity: 1;
-  background-image: radial-gradient(#141414 1px, #292e33 1px);
-  background-size: 20px 20px;
+  background-image: radial-gradient(#000000 0.65px, #1e252c 0.65px);
+  background-size: 13px 13px;
   border-radius: 1rem;
-
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  
+  display: flex;
+  flex-direction: column;
   max-width: 635px;
   margin: 0 auto;
   margin-top: 32px; 
   padding: 30PX;
+}
+
+.titulo_tech{
+  text-align: center;
+  color: #fff;
+  padding-bottom: 20px;
 }
 
 .tech_container {
