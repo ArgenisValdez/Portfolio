@@ -140,3 +140,20 @@ window.addEventListener("click", (e) => {
     document.body.classList.remove("modal-open");
   }
 });
+
+
+//Menu movil
+
+(function() {
+    const openButton = document.querySelector('.nav_menu');
+    const menu = document.querySelector('#nav');
+    const closeMenu = document.querySelector('.nav_close');
+
+    openButton.addEventListener('click', () => {
+        menu.classList.add('nav_show'); 
+    });
+
+    closeMenu.addEventListener('click', () => {
+        menu.classList.remove('nav_show'); 
+    });
+})();
