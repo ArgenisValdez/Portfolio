@@ -618,13 +618,20 @@ body.modal-open {
     opacity: 0;
     pointer-events: none;
     transition: .7s opacity;
+
   }
 
   .nav_show{
     --show:block;
     opacity: 1;
     pointer-events: unset;
+    overflow: hidden;
   }
+
+  .body--no-scroll {
+  overflow: hidden;
+  }
+
 
   .nav_close{
     position: absolute;

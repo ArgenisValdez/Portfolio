@@ -151,9 +151,11 @@ window.addEventListener("click", (e) => {
 
     openButton.addEventListener('click', () => {
         menu.classList.add('nav_show'); 
+        document.body.classList.add('body--no-scroll');
     });
 
     closeMenu.addEventListener('click', () => {
         menu.classList.remove('nav_show'); 
+        document.body.classList.remove('body--no-scroll'); 
     });
 })();
