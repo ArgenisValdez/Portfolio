@@ -599,6 +599,10 @@ body.modal-open {
     display: block;
   }
 
+  .nav_menu img{
+    padding-right: 4px;
+  }
+
   nav{
     position: fixed;
     background-color: #000;
