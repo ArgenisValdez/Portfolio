@@ -1,3 +1,22 @@
+//Menu movil
+
+(function() {
+    const openButton = document.querySelector('.nav_menu');
+    const menu = document.querySelector('#nav');
+    const closeMenu = document.querySelector('.nav_close');
+
+    openButton.addEventListener('click', () => {
+        menu.classList.add('nav_show'); 
+        document.body.classList.add('body--no-scroll');
+    });
+
+    closeMenu.addEventListener('click', () => {
+        menu.classList.remove('nav_show'); 
+        document.body.classList.remove('body--no-scroll'); 
+    });
+})();
+
+
 //Animacion de la barra de navegacion
 const nav = document.querySelector("#nav");
 
@@ -142,20 +161,3 @@ window.addEventListener("click", (e) => {
 });
 
 
-//Menu movil
-
-(function() {
-    const openButton = document.querySelector('.nav_menu');
-    const menu = document.querySelector('#nav');
-    const closeMenu = document.querySelector('.nav_close');
-
-    openButton.addEventListener('click', () => {
-        menu.classList.add('nav_show'); 
-        document.body.classList.add('body--no-scroll');
-    });
-
-    closeMenu.addEventListener('click', () => {
-        menu.classList.remove('nav_show'); 
-        document.body.classList.remove('body--no-scroll'); 
-    });
-})();

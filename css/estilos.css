@@ -103,7 +103,7 @@ nav a:focus {
   max-width: 599px;
   margin: 0 auto;
   align-items: center;
-  padding: 2rem;
+  padding: 32px 0;
 }
 
 .inicio_container {
@@ -618,7 +618,6 @@ body.modal-open {
     opacity: 0;
     pointer-events: none;
     transition: .7s opacity;
-
   }
 
   .nav_show{
@@ -632,7 +631,6 @@ body.modal-open {
   overflow: hidden;
   }
 
-
   .nav_close{
     position: absolute;
     top: 30px;
@@ -641,11 +639,7 @@ body.modal-open {
     cursor: pointer;
   }
 
-
-
-  .inicio{
-    max-width: 100%;
-  }
+  
 
   .inicio_container {
     grid-template-areas: 
@@ -655,6 +649,7 @@ body.modal-open {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 1rem;
+    padding-top: 25px;
   }
 
   .ft_perfil {
