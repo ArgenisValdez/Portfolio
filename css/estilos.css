@@ -639,8 +639,6 @@ body.modal-open {
     cursor: pointer;
   }
 
-  
-
   .inicio_container {
     grid-template-areas: 
     "ft_perfil"
@@ -710,6 +708,11 @@ body.modal-open {
 
   .slider_carts {
     height: 250px; 
+  }
+
+  .slider_carts img {
+    max-width: 90%;
+    max-height: 90%;
   }
 
 }
