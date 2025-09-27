@@ -715,4 +715,9 @@ body.modal-open {
     max-height: 75%;
   }
 
+  .arrow{
+    width: 30px;
+    transform: translateX(10%);
+  }
+
 }
