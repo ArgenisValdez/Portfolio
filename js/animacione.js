@@ -63,8 +63,6 @@ nav.addEventListener("dblclick", (e) => {
 
 
 
-
-
 //Animacion del slider de proyectos
 
 let slideIndexes = {};
