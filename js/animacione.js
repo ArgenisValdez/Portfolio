@@ -141,13 +141,13 @@ const closeModal = document.getElementById("closeModal");
 // Abrir modal
 verMasBtn.addEventListener("click", () => {
   modal.style.display = "flex";
-  document.body.classList.add("modal-open"); // bloquear scroll principal
+  document.body.classList.add("modal-open"); 
 });
 
 // Cerrar modal con X
 closeModal.addEventListener("click", () => {
   modal.style.display = "none";
-  document.body.classList.remove("modal-open"); // reactivar scroll
+  document.body.classList.remove("modal-open"); 
 });
 
 // Cerrar modal clicando fuera
