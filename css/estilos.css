@@ -632,6 +632,10 @@ body.modal-open {
   color: white;
 }
 
+.contacto_icons p{
+    font-size: 14px;
+  }
+
 .contacto_icons img:hover{
   transform: scale(0.9);
   transition: transform 0.2s;
@@ -790,10 +794,10 @@ body.modal-open {
     transform: translateX(10%);
   }
 
-  .contacto_main {
-    grid-template-columns: 1fr 1fr;
-  }
   
+  .contacto_icons p{
+    font-size: 14px;
+  }
 
 
 }
